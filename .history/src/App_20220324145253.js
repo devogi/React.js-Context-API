@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import Login from "./components/Login";
-import Profile from "./components/Profile";
 import { LoginContext } from "./contexts/LoginContext";
 
 function App() {
@@ -9,9 +7,7 @@ function App() {
 
   return (
     <div className="App">
-      <LoginContext.Provider value={{ username, setUsername, setShowProfile }}>
-        {showProfile ? <Profile /> : <Login />}
-      </LoginContext.Provider>
+      <LoginContext.Provider value={username} >{showProfile ? <Profile /> : <Login />}</LoginContext.Provider>
     </div>
   );
 }

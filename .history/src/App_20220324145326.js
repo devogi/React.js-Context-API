@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import Login from "./components/Login";
-import Profile from "./components/Profile";
 import { LoginContext } from "./contexts/LoginContext";
 
 function App() {
